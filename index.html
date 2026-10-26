@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Palabras</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="title">
+                <i class="fa-solid fa-magnifying-glass-chart"></i> Buscador de Palabras
+            </h2>
+
+            <!-- Alertas personalizadas -->
+            <div id="alertaBox" class="alert d-none" role="alert"></div>
+
+            <!-- Formulario principal -->
+            <div class="form-group">
+                <label for="textoInput">Introduce el texto:</label>
+                <textarea id="textoInput" rows="5" placeholder="Escribe o pega tu texto aquí..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="palabraInput">Palabra o carácter a buscar:</label>
+                <input type="text" id="palabraInput" placeholder="Ej. palabra">
+            </div>
+
+            <div class="button-group">
+                <button id="btnBuscar" class="btn btn-primary">
+                    <i class="fa-solid fa-search"></i> Buscar
+                </button>
+                <button id="btnLimpiar" class="btn btn-secondary">
+                    <i class="fa-solid fa-rotate-left"></i> Limpiar
+                </button>
+            </div>
+
+            <!-- Resultados -->
+            <div class="result-card">
+                <h3>Resultado:</h3>
+                <p><strong>Coincidencias encontradas:</strong> <span id="contadorResultados" class="badge">0</span></p>
+                <hr>
+                <label class="result-label">Texto procesado con marcas:</label>
+                <div id="resultadoTexto"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>
